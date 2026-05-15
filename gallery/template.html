@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Album page template — copy and rename for each album.
+	e.g. copy to gallery/sweden.html, set the title and add your photos/videos.
+-->
+<html>
+	<head>
+		<title>Album Title — Bingxue Xu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/custom.css" />
+		<link rel="stylesheet" href="../assets/css/more.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header / Sidebar -->
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Bingxue Xu" /></a>
+				<h1>
+					<strong>Bingxue Xu</strong><br />
+					M.Sc. @ KTH
+				</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../index.html#about">About Me</a></li>
+						<li><a href="../index.html#news">News</a></li>
+						<li><a href="../index.html#projects">Projects</a></li>
+						<li><a href="../index.html#publications">Publications</a></li>
+						<li><a href="../index.html#contact">Contact</a></li>
+						<li><a href="../more.html" class="active">More</a></li>
+					</ul>
+				</nav>
+				<ul class="sidebar-icons">
+					<li>
+						<a href="https://github.com/bingxue-xu" target="_blank" class="icon brands fa-github" title="GitHub">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/bingxue-xu/" target="_blank" class="icon brands fa-linkedin" title="LinkedIn">
+							<span class="label">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://scholar.google.com/citations?user=WCDeIqYAAAAJ&hl=zh-CN" target="_blank" class="icon solid fa-graduation-cap" title="Google Scholar">
+							<span class="label">Google Scholar</span>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:autoxue@gmail.com" class="icon solid fa-envelope" title="Email">
+							<span class="label">Email</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<section id="album-header">
+				<header class="major">
+					<h2>Album Title</h2>
+				</header>
+				<p class="album-back"><a href="../more.html">← Back to Gallery</a></p>
+				<p>Optional description of this album — where, when, what.</p>
+			</section>
+
+			<!--
+				PHOTO & VIDEO GRID
+				Photos: wrap in <a> so poptrox opens them full-screen.
+				Videos: embed directly with <video> or <iframe>.
+
+				Photo example:
+				<a href="../images/gallery/album-name/photo1.jpg" class="album-item">
+					<img src="../images/gallery/album-name/photo1.jpg" alt="Caption shown in lightbox" />
+				</a>
+
+				Video (local) example:
+				<div class="album-item album-video">
+					<video controls>
+						<source src="../images/gallery/album-name/clip1.mp4" type="video/mp4" />
+					</video>
+					<p class="more-caption">Caption</p>
+				</div>
+
+				Video (YouTube) example:
+				<div class="album-item album-video">
+					<div class="more-video-wrap">
+						<iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<p class="more-caption">Caption</p>
+				</div>
+			-->
+			<section id="album-grid">
+				<div class="photo-grid">
+
+					<!-- placeholder — delete these when you add real photos -->
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+					<div class="album-item album-placeholder"><span>Photo</span></div>
+
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; Bingxue Xu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.poptrox.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<script>
+			/* Activate poptrox lightbox for all photo links in this album */
+			$('#album-grid').poptrox({
+				caption: function($a) { return $a.find('img').attr('alt'); },
+				overlayColor: '#1a1a1a',
+				overlayOpacity: 0.85,
+				popupLoaderText: '',
+				usePopupCaption: true,
+				usePopupDefaultStyling: false,
+				usePopupEasyClose: true,
+				usePopupNav: true,
+				windowMargin: 40
+			});
+		</script>
+
+	</body>
+</html>

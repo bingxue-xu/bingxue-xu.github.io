@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Strata by HTML5 UP — html5up.net | @ajlkn
+	CCA 3.0 license (html5up.net/license)
 	Customized for Bingxue Xu
 -->
 <html>
@@ -15,179 +14,271 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Bingxue Xu" /></a>
-					<h1>
-						<strong>Bingxue Xu</strong><br />
-						Master's Student<br />
-						<a href="https://www.kth.se" target="_blank">KTH Royal Institute of Technology</a>
-					</h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="#about">About</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#publications">Publications</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+		<!-- Header / Sidebar -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Bingxue Xu" /></a>
+				<h1>
+					<strong>Bingxue Xu</strong><br />
+					M.Sc. @ KTH
+				</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#news">News</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="more.html">More</a></li>
+					</ul>
+				</nav>
+				<ul class="sidebar-icons">
+					<li>
+						<a href="https://github.com/bingxue-xu" target="_blank" class="icon brands fa-github" title="GitHub">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/bingxue-xu/" target="_blank" class="icon brands fa-linkedin" title="LinkedIn">
+							<span class="label">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://scholar.google.com/citations?user=WCDeIqYAAAAJ&hl=zh-CN" target="_blank" class="icon solid fa-graduation-cap" title="Google Scholar">
+							<span class="label">Google Scholar</span>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:autoxue@gmail.com" class="icon solid fa-envelope" title="Email">
+							<span class="label">Email</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
 
 		<!-- Main -->
-			<div id="main">
+		<div id="main">
 
-				<!-- About -->
-				<section id="about">
-					<header class="major">
-						<h2>About Me</h2>
-					</header>
-					<p>
-						I am a Master's student at <a href="https://www.kth.se" target="_blank">KTH Royal Institute of Technology</a>,
-						working at the intersection of robotics, computer vision, and sensor fusion.
-						My research focuses on robust perception for autonomous systems — particularly how radar
-						and camera sensors can be combined to maintain reliable 3D object detection and tracking
-						under adverse real-world conditions such as rain, fog, and low light.
-					</p>
-					<p>
-						I am passionate about building perception systems that work beyond the lab, bridging the
-						gap between state-of-the-art research and robust deployment in the real world.
-					</p>
-					<ul class="actions">
-						<li><a href="#contact" class="button">Contact Me</a></li>
-						<li><a href="#" class="button">CV / Résumé</a></li>
-					</ul>
-				</section>
+			<!-- About Me -->
+			<section id="about">
+				<header class="major">
+					<h2>Welcome to Bingxue Xu's Page 👋</h2>
+				</header>
+				<p>I am a master's student in Autonomous Systems at <a href="https://www.kth.se" target="_blank">KTH Royal Institute of Technology</a>, supervised by <a href="https://www.kth.se/profile/jensfelt" target="_blank">Prof. Patric Jensfelt</a>. My research focuses on robust 3D perception for autonomous driving and robotics, with a particular interest in multimodal sensor fusion.
+				</p>
+				<p>
+					Before that, I worked as a product engineer in the automotive R&D, covering product development and data management.
+				</p>
+				<p>
+				I am currently looking for full-time positions in autonomous driving or robotics after graduation. If my background seems relevant, please feel free to reach out.
+				</p>
+			</section>
 
-				<!-- Projects -->
-				<section id="projects">
-					<h2>Projects</h2>
-					<div class="row">
+			<!-- News -->
+			<section id="news">
+				<h2>News</h2>
+				<ul class="news-list">
+					<li>
+						<span class="news-date">May 14, 2026</span>
+						<span class="news-text">
+							Our <a href="https://arxiv.org/abs/2604.13571" target="_blank">RadarMOT</a> paper is
+							accepted to 1st Workshop on Generalization in Autonomous Driving ICRA 2026, and <strong class="spotlight">invited for spotlight!</strong> ✨
+						</span>
+					</li>
+					<li>
+						<span class="news-date">May 02, 2026</span>
+						<span class="news-text">
+							Our <a href="https://arxiv.org/abs/2604.13571" target="_blank">RadarMOT</a> paper is
+							accepted to Radar in Robotics workshop ICRA 2026! ✨
+						</span>
+					</li>
+				</ul>
+			</section>
 
-						<article class="col-6 col-12-xsmall project-item">
-							<div class="project-badge">ICRA'26 Workshop</div>
-							<h3><a href="https://bingxue-xu.github.io/RadarMOT" target="_blank">RadarMOT</a></h3>
-							<p>
-								Radar-Informed 3D Multi-Object Tracking under Adverse Conditions.
-								Integrates radar as an explicit observation modality during tracking to recover
-								missed detections, achieving 33.3% AMOTA vs. 22.8% CenterPoint baseline.
-							</p>
-							<ul class="actions small">
-								<li><a href="https://arxiv.org/abs/2604.13571" target="_blank" class="button small">arXiv</a></li>
-								<li><a href="https://github.com/bingxue-xu/RadarMOT" target="_blank" class="button small">GitHub</a></li>
-								<li><a href="https://bingxue-xu.github.io/RadarMOT" target="_blank" class="button small">Project</a></li>
-							</ul>
-						</article>
+			<!-- Projects -->
+			<section id="projects">
+				<h2>Projects</h2>
 
-						<article class="col-6 col-12-xsmall project-item">
-							<div class="project-badge">Radar-Camera Fusion</div>
-							<h3><a href="https://github.com/bingxue-xu/RaCaDet" target="_blank">RaCaDet</a></h3>
-							<p>
-								Radar-Camera Fusion 3D Object Detection. Addresses camera depth ambiguity
-								using radar as explicit spatial anchors and velocity priors, with a biased
-								self-attention mechanism. Achieves 58.3% mAP and 64.0% NDS on nuScenes.
-							</p>
-							<ul class="actions small">
-								<li><a href="https://github.com/bingxue-xu/RaCaDet" target="_blank" class="button small">GitHub</a></li>
-							</ul>
-						</article>
+				<!-- ── Always visible (first 3) ── -->
 
-						<article class="col-6 col-12-xsmall project-item">
-							<div class="project-badge">Robotics · ROS 2</div>
-							<h3><a href="https://github.com/bingxue-xu/RoboticsProject" target="_blank">Autonomous Recycling Robot</a></h3>
-							<p>
-								Full-stack autonomous mobile robot developed in ROS 2. Features autonomous
-								navigation with A* path planning, a 6-DOF arm for manipulation, object detection,
-								and a behavior tree system for task orchestration.
-							</p>
-							<ul class="actions small">
-								<li><a href="https://github.com/bingxue-xu/RoboticsProject" target="_blank" class="button small">GitHub</a></li>
-							</ul>
-						</article>
-
+				<!-- RaCaDet -->
+				<div class="pub-card">
+					<div class="pub-thumb pub-thumb-placeholder">
+						<span>RaCaDet</span>
 					</div>
-				</section>
+					<div class="pub-info">
+						<h3 class="pub-title">RaCaDet: Radar-Camera Fusion 3D Object Detection</h3>
+						<p class="pub-desc">
+							<em>This research project addresses camera depth ambiguity by introducing radar queries without a point cloud backbone.</em>
+						</p>
+						<div class="pub-links">
+							<a href="https://github.com/bingxue-xu/RaCaDet" target="_blank" class="button small pub-btn">Code</a>
+						</div>
+					</div>
+				</div>
 
-				<!-- Publications -->
-				<section id="publications">
-					<h2>Publications</h2>
-					<div class="pub-list">
+				<!-- Autonomous Recycling Robot -->
+				<div class="pub-card">
+					<div class="pub-thumb pub-thumb-placeholder">
+						<span>Robotics</span>
+					</div>
+					<div class="pub-info">
+						<h3 class="pub-title">Autonomous Recycling Robot</h3>
+						<p class="pub-desc">
+							<em>This project develops a completely autonomous system on a mobile robot from scratch.</em>
+						</p>
+						<div class="pub-links">
+							<a href="https://github.com/bingxue-xu/RoboticsProject" target="_blank" class="button small pub-btn">Code</a>
+						</div>
+					</div>
+				</div>
 
-						<div class="pub-item">
-							<div class="pub-venue">ICRA 2026 · Workshop</div>
-							<div class="pub-title">
-								Radar-Informed 3D Multi-Object Tracking under Adverse Conditions
-							</div>
-							<div class="pub-authors">
-								<strong>Bingxue Xu</strong> et al.
-							</div>
+				<!-- Line Following Robot -->
+				<div class="pub-card">
+					<div class="pub-thumb pub-thumb-placeholder">
+						<span>Line Robot</span>
+					</div>
+					<div class="pub-info">
+						<h3 class="pub-title">Line Following Robot</h3>
+						<p class="pub-desc">
+							<em>This line following robot workshop is developed for high school students to learn computer vision.</em>
+						</p>
+						<div class="pub-links">
+							<a href="https://github.com/bingxue-xu/RoboticsProject" target="_blank" class="button small pub-btn">Code</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- ── Hidden extra projects — add more pub-cards here ── -->
+				<div id="projects-extra" style="display:none;">
+
+					<!-- Example extra project — replace with your own -->
+					<div class="pub-card">
+						<div class="pub-thumb pub-thumb-placeholder">
+							<span>Project</span>
+						</div>
+						<div class="pub-info">
+							<h3 class="pub-title">Your Next Project Title</h3>
+							<p class="pub-authors"><strong>Bingxue Xu</strong>, et al. · <em>Course / Research</em></p>
 							<div class="pub-links">
-								<a href="https://arxiv.org/abs/2604.13571" target="_blank" class="button small">arXiv</a>
-								<a href="https://github.com/bingxue-xu/RadarMOT" target="_blank" class="button small">GitHub</a>
-								<a href="https://bingxue-xu.github.io/RadarMOT" target="_blank" class="button small">Project Page</a>
+								<a href="#" class="button small pub-btn">Code</a>
 							</div>
-						</div>
-
-						<div class="pub-item">
-							<div class="pub-venue">Preprint</div>
-							<div class="pub-title">
-								RaCaDet: Radar-Camera Fusion 3D Object Detection
-							</div>
-							<div class="pub-authors">
-								<strong>Bingxue Xu</strong> et al.
-							</div>
-							<div class="pub-links">
-								<a href="https://github.com/bingxue-xu/RaCaDet" target="_blank" class="button small">GitHub</a>
-							</div>
-						</div>
-
-					</div>
-				</section>
-
-				<!-- Contact -->
-				<section id="contact">
-					<h2>Contact</h2>
-					<p>Feel free to reach out for collaborations, questions, or just to connect!</p>
-					<div class="row">
-						<div class="col-12">
-							<ul class="labeled-icons">
-								<li>
-									<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-									<a href="mailto:autoxue@gmail.com">autoxue@gmail.com</a>
-								</li>
-								<li>
-									<h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
-									Stockholm, Sweden
-								</li>
-							</ul>
 						</div>
 					</div>
-				</section>
 
-			</div>
+				</div>
+
+				<div class="projects-toggle-wrap">
+					<div class="projects-toggle-spacer"></div>
+					<span id="projects-toggle" class="projects-toggle-btn">More ▾</span>
+				</div>
+
+			</section>
+
+			<!-- Publications -->
+			<section id="publications">
+				<h2>Publications</h2>
+
+				<!-- RadarMOT -->
+				<div class="pub-card">
+					<div class="pub-thumb">
+						<img src="images/pubs/radarmot.png" alt="RadarMOT pipeline" />
+					</div>
+					<div class="pub-info">
+						<h3 class="pub-title">Radar-Informed 3D Multi-Object Tracking under Adverse Conditions</h3>
+						<p class="pub-authors"><strong>Bingxue Xu</strong>, et al. · <em>ICRA 2026 Workshop · Spotlight</em></p>
+						<div class="pub-links">
+							<a href="https://arxiv.org/abs/2604.13571" target="_blank" class="button small pub-btn">arXiv</a>
+							<a href="https://github.com/bingxue-xu/RadarMOT" target="_blank" class="button small pub-btn">Code</a>
+							<a href="https://bingxue-xu.github.io/RadarMOT" target="_blank" class="button small pub-btn">Project</a>
+							<button class="button small pub-btn bib-toggle" data-target="bib-radarmot">Bib</button>
+						</div>
+						<pre class="bibtex-block" id="bib-radarmot">@inproceedings{xu2026radarmot,
+  title     = {Radar-Informed 3D Multi-Object Tracking under Adverse Conditions},
+  author    = {Xu, Bingxue and others},
+  booktitle = {ICRA Workshop},
+  year      = {2026}
+}</pre>
+					</div>
+				</div>
+
+				<!-- Master Thesis -->
+				<div class="pub-card">
+					<div class="pub-thumb thesis-label">
+						<span>Master</span>
+					</div>
+					<div class="pub-info">
+						<h3 class="pub-title">Your Master Thesis Title Here</h3>
+						<p class="pub-authors"><strong>Bingxue Xu</strong></p>
+						<p class="pub-venue">Master Thesis, M.Sc. Autonomous Systems, KTH Royal Institute of Technology, 2026.</p>
+						<div class="pub-links">
+							<a href="#" class="button small pub-btn">KTH</a>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Contact -->
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>
+					If you're interested in any of the topics, have questions, suggestions, ideas, comments,
+					or just want to say hi, I'm happy to get in touch! 
+				</p>
+				<ul class="contact-inline">
+					<li>
+						<i class="icon solid fa-envelope"></i>
+						<a href="mailto:autoxue@gmail.com">autoxue@gmail.com</a>
+					</li>
+					<li>
+						<i class="icon solid fa-map-marker-alt"></i>
+						Stockholm, Sweden
+					</li>
+				</ul>
+			</section>
+
+		</div>
 
 		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://github.com/bingxue-xu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="mailto:autoxue@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Bingxue Xu</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; Bingxue Xu</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('.bib-toggle').forEach(function(btn) {
+				btn.addEventListener('click', function() {
+					var target = document.getElementById(this.dataset.target);
+					var visible = target.style.display === 'block';
+					target.style.display = visible ? 'none' : 'block';
+					this.textContent = visible ? 'Bib' : 'Bib ▴';
+				});
+			});
+		</script>
+		<script>
+			(function() {
+				var extra  = document.getElementById('projects-extra');
+				var btn    = document.getElementById('projects-toggle');
+				var open   = false;
+				btn.addEventListener('click', function() {
+					open = !open;
+					extra.style.display = open ? 'block' : 'none';
+					btn.textContent = open ? 'Show less ▴' : 'More ▾';
+				});
+			})();
+		</script>
 
 	</body>
 </html>

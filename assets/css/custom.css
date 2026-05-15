@@ -1,156 +1,367 @@
-/* Custom overrides for Bingxue Xu's personal page
-   Based on Strata by HTML5 UP — accent style inspired by schmluk.github.io */
+/* Custom styles for Bingxue Xu — Strata base + al-folio-style pub cards */
 
 :root {
-	--activecolor: #505cff;
-	--buttonhovercolor: #4876f7;
-	--buttonbg: rgba(72, 118, 247, 0.1);
+	--accent:      #505cff;
+	--accent-hover:#4876f7;
+	--accent-bg:   rgba(72, 118, 247, 0.08);
+	--text-muted:  #666;
+	--border:      #e0e0e0;
+	--section-rule:#ccc;      /* grey, not blue */
 }
 
-/* ── Accent colour overrides ── */
-a {
-	color: var(--activecolor);
-	border-bottom-color: transparent;
-}
-a:hover {
-	color: var(--buttonhovercolor);
-}
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
+/* ── Global accent colour ── */
+a { color: var(--accent); border-bottom-color: transparent; }
+a:hover { color: var(--accent-hover); }
+
+/* Default buttons (Contact Me, CV) → grey, neutral */
 .button {
-	background-color: transparent;
-	border-color: var(--activecolor);
-	color: var(--activecolor);
+	border-color: #aaa;
+	color: #555;
+	background: transparent;
 }
 .button:hover {
-	background-color: var(--buttonbg);
-	border-color: var(--buttonhovercolor);
-	color: var(--buttonhovercolor);
+	border-color: #777;
+	color: #333;
+	background: #f5f5f5;
 }
-.button.primary,
-input[type="submit"].primary {
-	background-color: var(--activecolor);
-	border-color: var(--activecolor);
+.button.primary {
+	background: #555;
+	border-color: #555;
 	color: #fff;
 }
 .button.primary:hover {
-	background-color: var(--buttonhovercolor);
-	border-color: var(--buttonhovercolor);
+	background: #333;
+	border-color: #333;
 }
 
-/* ── Header sidebar nav ── */
-#header nav ul {
+/* ── Make .inner a flex column so icons pin to the bottom ── */
+#header .inner {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.sidebar-icons {
+	margin-top: auto !important;   /* push to absolute bottom */
+}
+
+/* ── Force h1 line-break visible at all screen sizes ── */
+#header h1 br { display: inline !important; }
+
+/* ── Sidebar nav ── */
+#header nav { margin-top: 1.2em; }
+#header nav ul { list-style: none; padding: 0; margin: 0; }
+#header nav ul li { margin: 0.3em 0; }
+#header nav ul li a {
+	font-size: 0.82em;
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.55);
+	text-decoration: none;
+	border: none;
+	transition: color 0.2s;
+}
+#header nav ul li a:hover { color: #fff; }
+
+/* ── Sidebar social icons (bottom of sidebar, right-aligned) ── */
+.sidebar-icons {
 	list-style: none;
 	padding: 0;
-	margin: 1.2em 0 0 0;
+	margin: 1.8em 0 0 0;
+	display: flex;
+	gap: 0.9em;
+	align-items: center;
+	justify-content: flex-end;   /* right-align to match the name */
 }
-#header nav ul li {
-	margin: 0.4em 0;
-}
-#header nav ul li a {
-	font-size: 0.9em;
-	font-weight: 600;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-	color: rgba(255,255,255,0.6);
-	border-bottom: none;
+.sidebar-icons li a {
+	font-size: 1.2em;
+	color: rgba(255,255,255,0.5);
+	border: none;
 	text-decoration: none;
 	transition: color 0.2s;
 }
-#header nav ul li a:hover {
+.sidebar-icons li a:hover { color: #fff; }
+/* Academicons Google Scholar sizing */
+.sidebar-icons .ai { font-size: 1.25em; vertical-align: middle; }
+
+/* ── Section headings — grey rule, not blue ── */
+#main section { margin-bottom: 3.5em; }
+
+
+/* ── News section (kin-zhang style) ── */
+.news-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.news-list li {
+	display: flex;
+	gap: 1.2em;
+	padding: 0.55em 0;
+	border-bottom: 1px solid #f0f0f0;
+	font-size: 0.92em;
+	line-height: 1.5;
+}
+.news-list li:last-child { border-bottom: none; }
+.news-date {
+	flex: 0 0 7em;
+	font-weight: 600;
+	color: #888;
+	white-space: nowrap;
+	font-size: 0.9em;
+}
+.news-text { flex: 1; color: #444; }
+.news-text strong { color: var(--accent); font-weight: 700; }
+.news-text strong.spotlight { color: #a855f7; }
+
+/* ═══════════════════════════════════════════
+   Publication cards  (al-folio style)
+═══════════════════════════════════════════ */
+.pub-card {
+	display: flex;
+	gap: 1.4em;
+	margin-bottom: 2.2em;
+}
+
+/* Thumbnail */
+.pub-thumb {
+	flex: 0 0 200px;
+	max-width: 200px;
+}
+.pub-thumb img {
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid var(--border);
+	display: block;
+}
+
+/* Placeholder tile */
+.pub-thumb-placeholder {
+	background: linear-gradient(135deg, #f3f4ff 0%, #e4e7ff 100%);
+	border-radius: 4px;
+	border: 1px solid #d0d4ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 110px;
+}
+.pub-thumb-placeholder span {
+	font-size: 0.85em;
+	font-weight: 700;
+	color: var(--accent);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+/* Thesis label block (left side) — dark, like Lukas */
+.thesis-label {
+	background: #3a3a3a;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 80px;
+}
+.thesis-label span {
+	font-size: 0.8em;
+	font-weight: 700;
 	color: #fff;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
 }
 
-/* ── Section headings ── */
-#main section {
-	margin-bottom: 3em;
-}
-#main section > h2 {
-	border-bottom: 2px solid var(--activecolor);
-	padding-bottom: 0.4em;
-	margin-bottom: 1.2em;
-}
+/* Info column */
+.pub-info { flex: 1; min-width: 0; }
 
-/* ── Projects ── */
-.project-item {
-	margin-bottom: 2em;
-	padding-right: 1.5em;
-}
-.project-badge {
+.pub-venue-badge {
 	display: inline-block;
-	font-size: 0.72em;
+	font-size: 0.7em;
 	font-weight: 700;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	color: var(--activecolor);
-	border: 1.5px solid var(--activecolor);
+	color: #555;
+	border: 1.5px solid #bbb;    /* grey badge, not blue */
 	border-radius: 3px;
-	padding: 0.15em 0.55em;
+	padding: 0.12em 0.5em;
 	margin-bottom: 0.5em;
 }
-.project-item h3 {
-	margin: 0.3em 0 0.5em;
-	font-size: 1.05em;
-}
-.project-item p {
-	font-size: 0.92em;
-	line-height: 1.6;
-	color: #555;
-	margin-bottom: 0.7em;
-}
 
-/* ── Publications ── */
-.pub-list {
-	display: flex;
-	flex-direction: column;
-	gap: 1.6em;
-}
-.pub-item {
-	border-left: 3px solid var(--activecolor);
-	padding-left: 1em;
-}
-.pub-venue {
-	font-size: 0.75em;
-	font-weight: 700;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: var(--activecolor);
-	margin-bottom: 0.3em;
-}
 .pub-title {
 	font-size: 1em;
-	font-weight: 600;
-	color: #333;
-	margin-bottom: 0.25em;
+	font-weight: 700;
+	color: #222;
+	margin: 0.3em 0 0.25em;
 	line-height: 1.4;
 }
+
 .pub-authors {
 	font-size: 0.88em;
-	color: #666;
-	margin-bottom: 0.5em;
+	color: var(--text-muted);
+	margin: 0 0 0.25em;
 }
+
+.pub-venue {
+	font-size: 0.84em;
+	color: #777;
+	margin: 0 0 0.5em;
+	font-style: italic;
+}
+
+.pub-desc {
+	font-size: 0.86em;
+	color: #555;
+	line-height: 1.6;
+	margin: 0 0 0.8em;
+}
+
+/* Action buttons */
 .pub-links {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.4em;
+	align-items: center;
 }
-.pub-links .button.small {
-	font-size: 0.75em;
-	padding: 0.3em 0.8em;
+.pub-btn {
+	font-size: 0.72em !important;
+	padding: 0.28em 0.75em !important;
+	height: auto !important;
+	line-height: 1.6 !important;
+	cursor: pointer;
 }
 
-/* ── Contact labeled-icons ── */
-#contact .labeled-icons li {
-	margin-bottom: 1em;
+/* BibTeX block */
+.bibtex-block {
+	display: none;
+	margin-top: 0.8em;
+	background: #f7f8ff;
+	border: 1px solid #dde0f5;
+	border-radius: 4px;
+	padding: 0.8em 1em;
+	font-size: 0.78em;
+	line-height: 1.7;
+	color: #333;
+	white-space: pre;
+	overflow-x: auto;
+	font-family: 'Courier New', monospace;
 }
 
-/* ── Footer ── */
-#footer .inner ul.icons li a {
+/* ── Contact — inline row ── */
+.contact-inline {
+	list-style: none;
+	padding: 0;
+	margin: 0.8em 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+.contact-inline li {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	font-size: 0.95em;
+	color: #444;
+}
+.contact-inline li .icon,
+.contact-inline li i {
+	color: #888;
+	font-size: 1.1em;
+}
+.contact-inline a {
+	color: #666;
+	border: none;
+	text-decoration: none;
+}
+.contact-inline a:hover {
+	color: #333;
+}
+
+/* ── Footer / attribution ── */
+#footer .copyright {
+	color: rgba(255, 255, 255, 0.75) !important;  /* legible at all sizes */
+}
+#footer .copyright li a {
+	color: rgba(255, 255, 255, 0.75) !important;
+}
+#footer .copyright li a:hover {
+	color: #fff !important;
+}
+
+/* ── Avatar — 61.8% sidebar width, perfect circle ── */
+#header .image.avatar {
+	width: 61.8% !important;
+	aspect-ratio: 1 / 1 !important;
+	overflow: hidden !important;
+	border-radius: 50% !important;
+	margin: 0 0 1em auto !important;
+	display: block !important;
+}
+#header .image.avatar img {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	object-position: 60% 35% !important;
+	border-radius: 0 !important;
+}
+
+/* ── Pub-btn — kin-zhang style: 1px grey border, rect, no blue ── */
+.pub-btn {
+	border: 1px solid #999 !important;
+	background: transparent !important;
+	color: #555 !important;
+	font-size: 0.78em !important;
+	font-weight: 500 !important;
+	padding: 0.1em 0.5em !important;
+	min-width: 0 !important;        /* override Strata's 10em min-width */
+	width: auto !important;
+	height: auto !important;
+	line-height: 1.6 !important;
+	border-radius: 3px !important;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	white-space: nowrap;
+}
+.pub-btn:hover {
+	border-color: var(--accent) !important;
+	color: var(--accent) !important;
+	background: transparent !important;
+}
+
+/* ── Author name highlight — bold + accent colour ── */
+.pub-authors strong {
+	font-weight: 700;
+	color: var(--accent);
+}
+
+/* ── Projects expand/collapse ── */
+#projects-extra {
+	display: none;
+}
+.projects-toggle-wrap {
+	display: flex;
+	gap: 1.4em;                /* same gap as pub-card */
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
+}
+.projects-toggle-spacer {
+	flex: 0 0 200px;           /* same width as pub-thumb */
+	max-width: 200px;
+}
+.projects-toggle-btn {
 	color: #999;
-	transition: color 0.2s;
+	font-size: 0.78em;
+	font-weight: 500;
+	cursor: pointer;
+	display: inline-block;
+	user-select: none;
 }
-#footer .inner ul.icons li a:hover {
-	color: var(--activecolor);
+.projects-toggle-btn:hover {
+	color: var(--accent);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 600px) {
+	.pub-card { flex-direction: column; }
+	.pub-thumb { flex: none; max-width: 100%; }
+	.contact-inline { flex-direction: column; gap: 0.8em; }
 }

@@ -1,0 +1,188 @@
+/* Styles for more.html and gallery album pages */
+
+/* Active nav link */
+#nav ul li a.active {
+	color: #fff !important;
+}
+
+/* ── Album grid (more.html) — one cover tile per album ── */
+.album-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+	margin-bottom: 2em;
+}
+
+.album-tile {
+	text-decoration: none;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+.album-tile:hover .album-cover img { opacity: 0.82; }
+.album-tile:hover .album-label { color: var(--accent); }
+
+.album-cover {
+	border-radius: 6px;
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	background: linear-gradient(135deg, #f3f4ff 0%, #e4e7ff 100%);
+	border: 1px solid #d0d4ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.album-cover img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: opacity 0.2s;
+}
+
+.album-placeholder .album-cover span {
+	font-size: 0.8em;
+	font-weight: 700;
+	color: #9096cc;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.album-label {
+	font-size: 0.88em;
+	font-weight: 600;
+	color: #444;
+	text-align: center;
+	margin: 0.45em 0 0;
+	transition: color 0.2s;
+}
+
+/* ── Photo grid (album pages) — lightbox-enabled ── */
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.6em;
+}
+
+.album-item {
+	border-radius: 5px;
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	display: block;
+	background: #f0f0f0;
+}
+.album-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: opacity 0.2s;
+}
+.album-item:hover img { opacity: 0.82; }
+
+/* Video item — taller, no fixed aspect ratio */
+.album-video {
+	aspect-ratio: unset;
+}
+.album-video video {
+	width: 100%;
+	border-radius: 5px;
+	display: block;
+}
+
+/* YouTube embed wrapper */
+.more-video-wrap {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.more-video-wrap iframe {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	border: 0;
+}
+
+/* Placeholder tile inside album */
+.album-item.album-placeholder {
+	background: linear-gradient(135deg, #f3f4ff 0%, #e4e7ff 100%);
+	border: 1px solid #d0d4ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.album-item.album-placeholder span {
+	font-size: 0.8em;
+	font-weight: 700;
+	color: #9096cc;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+/* Caption */
+.more-caption {
+	font-size: 0.82em;
+	color: #888;
+	margin: 0.3em 0 0;
+	text-align: center;
+}
+
+/* Back link */
+.album-back {
+	margin: -0.5em 0 1em;
+	font-size: 0.88em;
+}
+.album-back a {
+	color: #888;
+	border: none;
+	text-decoration: none;
+}
+.album-back a:hover { color: var(--accent); }
+
+/* ── Blog list ── */
+.blog-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.blog-list li {
+	display: flex;
+	gap: 1.4em;
+	padding: 0.75em 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+.blog-list li:last-child { border-bottom: none; }
+
+.blog-date {
+	flex: 0 0 6em;
+	font-size: 0.85em;
+	font-weight: 600;
+	color: #999;
+	white-space: nowrap;
+	padding-top: 0.1em;
+}
+.blog-body { flex: 1; }
+.blog-title {
+	font-size: 0.95em;
+	font-weight: 700;
+	color: #222;
+	text-decoration: none;
+	border: none;
+	display: block;
+	margin-bottom: 0.2em;
+}
+.blog-title:hover { color: var(--accent); }
+.blog-excerpt {
+	font-size: 0.85em;
+	color: #777;
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 600px) {
+	.album-grid { grid-template-columns: repeat(2, 1fr); }
+	.photo-grid  { grid-template-columns: repeat(2, 1fr); }
+}
