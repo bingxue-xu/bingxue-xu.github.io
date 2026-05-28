@@ -374,6 +374,23 @@ a:hover { color: var(--accent-hover); }
 	color: var(--accent);
 }
 
+/* Clickable project thumbnails */
+a.pub-thumb {
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+a.pub-thumb:hover {
+	box-shadow: 0 2px 8px rgba(80, 92, 255, 0.25);
+	border-color: var(--accent) !important;
+}
+.pub-title a {
+	color: inherit;
+	text-decoration: none;
+	border: none;
+}
+.pub-title a:hover {
+	color: var(--accent);
+}
+
 /* ── Responsive ── */
 @media screen and (max-width: 600px) {
 	.pub-card { flex-direction: column; }
