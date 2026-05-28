@@ -1,8 +1,8 @@
 /* Custom styles for Bingxue Xu — Strata base + al-folio-style pub cards */
 
 :root {
-	--accent:      #505cff;
-	--accent-hover:#4876f7;
+	--accent:      #4a72b5;
+	--accent-hover:#3d6fa8;
 	--accent-bg:   rgba(72, 118, 247, 0.08);
 	--text-muted:  #666;
 	--border:      #e0e0e0;
@@ -342,10 +342,11 @@ a:hover { color: var(--accent-hover); }
 	background: transparent !important;
 }
 
-/* ── Author name highlight — bold + accent colour ── */
+/* ── Author name highlight — heavy bold + fuchsia ── */
 .pub-authors strong {
-	font-weight: 700;
-	color: var(--accent);
+	font-weight: 900;
+	font-size: 1.05em;
+	color: #9333ea;
 }
 
 /* ── Projects expand/collapse ── */
@@ -390,6 +391,8 @@ a.pub-thumb:hover {
 .pub-title a:hover {
 	color: var(--accent);
 }
+
+
 
 /* ── Responsive ── */
 @media screen and (max-width: 600px) {
